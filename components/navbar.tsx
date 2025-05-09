@@ -1,12 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { Playfair_Display } from "next/font/google";
+import { Menu, ShoppingCart, X } from "lucide-react";
+import { Playfair_Display, Playwrite_AR } from "next/font/google";
+import { Button } from "./ui/button";
 
 const playFair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
+});
+
+const playWrite = Playwrite_AR({
+  variable: "--font-playwrite",
 });
 
 export default function Navbar() {
@@ -58,21 +63,19 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div className="transition-all duration-300">
             <Link
               href="/"
               className={`${
-                playFair.className
-              } text-2xl font-bold items-center flex gap-2 ${
-                isScrolled ? "text-gray-700" : "text-white"
+                playWrite.className
+              } text-base font-bold items-center flex gap-2 ${
+                isScrolled ? "text-green-600" : "text-white"
               }`}
             >
               Yufa Grape
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <Link
@@ -80,8 +83,8 @@ export default function Navbar() {
                 href={item.link}
                 className={`transition-colors ${
                   isScrolled
-                    ? "text-gray-700 hover:text-gray-900"
-                    : "text-white hover:text-gray-200"
+                    ? "text-gray-700 hover:text-green-600"
+                    : "text-white hover:text-green-600"
                 }`}
               >
                 {item.name}
@@ -89,18 +92,20 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-green-600 hover:bg-green-800 text-white font-medium rounded-md transition-all duration-300 px-4 py-2">
+            <Button
+              size="lg"
+              className="bg-green-600 hover:bg-green-800 text-white font-medium transition-all duration-300 px-4 py-2"
+            >
+              <ShoppingCart className="w-5 h-5 mr-2" />
               Pesan
-            </button>
+            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`transition-colors ${
+              className={`transition-colors cursor-pointer ${
                 isScrolled
                   ? "text-gray-700 hover:text-gray-900"
                   : "text-white hover:text-gray-200"
@@ -116,7 +121,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <div
           className={`md:hidden transition-all duration-300 overflow-hidden ${
             isMobileMenuOpen
@@ -135,12 +139,13 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <button
+            <Button
+              size={"lg"}
               onClick={() => setIsMobileMenuOpen(false)}
               className="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-5 rounded-md w-full mt-2"
             >
               Pesan
-            </button>
+            </Button>
           </div>
         </div>
       </div>
