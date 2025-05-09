@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/bg-main.webp"
@@ -58,6 +58,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

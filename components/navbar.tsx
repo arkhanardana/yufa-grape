@@ -62,7 +62,9 @@ export default function Navbar() {
           <div className="transition-all duration-300">
             <Link
               href="/"
-              className={`${playFair.className} text-2xl font-bold ${
+              className={`${
+                playFair.className
+              } text-2xl font-bold items-center flex gap-2 ${
                 isScrolled ? "text-gray-700" : "text-white"
               }`}
             >
