@@ -19,7 +19,7 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-green-100 ">
+            <div className="relative rounded-2xl overflow-hidden">
               <Image
                 src="/bg-main.webp"
                 alt="Kebun Yufa"

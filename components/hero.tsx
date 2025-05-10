@@ -19,7 +19,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/30 to-black/70" />
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white px-4 max-w-4xl mx-auto">
@@ -40,7 +40,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <Button
                 size="lg"
-                className="bg-green-700 hover:bg-green-800 text-white font-medium text-base px-6 w-full sm:w-auto"
+                className="bg-green-600 hover:bg-green-800 text-white font-medium text-base px-6 w-full sm:w-auto"
               >
                 <ShoppingBag className="mr-2 h-5 w-5" />
                 Pesan Sekarang

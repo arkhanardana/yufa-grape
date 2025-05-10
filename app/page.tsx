@@ -1,13 +1,13 @@
 import About from "@/components/about";
 import Hero from "@/components/hero";
-import ProductSection from "@/components/products";
+import Products from "@/components/products";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <About />
-      <ProductSection />
+      <Products />
     </main>
   );
 }

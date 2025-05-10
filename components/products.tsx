@@ -1,54 +1,74 @@
 import Image from "next/image";
-import { PhoneCall, ShoppingCart, Star } from "lucide-react";
+import { PhoneCall, ShoppingCart } from "lucide-react";
 import { Button } from "./ui/button";
 
 const grapeProducts = [
   {
     id: 1,
-    name: "Anggur Hitam Premium",
-    description:
-      "Bibit anggur hitam varietas unggul dengan produktivitas tinggi dan rasa manis.",
+    name: "Anggur Anggur",
+    description: "Deskripsi",
     price: 75000,
-    rating: 4.8,
     image: "/bg-main.webp",
   },
   {
     id: 2,
-    name: "Anggur Merah Super",
-    description:
-      "Bibit anggur merah yang tahan penyakit dengan ukuran buah besar dan rasa manis segar.",
+    name: "Anggur Anggur",
+    description: "Deskripsi",
     price: 85000,
-    rating: 4.9,
     image: "/bg-main.webp",
   },
   {
     id: 3,
-    name: "Anggur Hijau Seedless",
-    description:
-      "Bibit anggur hijau tanpa biji yang cocok untuk ditanam di dataran rendah hingga menengah.",
+    name: "Anggur Anggur",
+    description: "Deskripsi",
     price: 95000,
-    rating: 4.7,
     image: "/bg-main.webp",
   },
   {
     id: 4,
-    name: "Anggur Cardinal",
-    description:
-      "Bibit anggur cardinal dengan ciri khas warna merah keunguan dan rasa manis sedikit asam.",
+    name: "Anggur",
+    description: "Deskripsi",
     price: 80000,
-    rating: 4.6,
+    image: "/bg-main.webp",
+  },
+  {
+    id: 5,
+    name: "Anggur",
+    description: "Deskripsi",
+    price: 80000,
+    image: "/bg-main.webp",
+  },
+  {
+    id: 6,
+    name: "Anggur",
+    description: "Deskripsi",
+    price: 80000,
+    image: "/bg-main.webp",
+  },
+  {
+    id: 7,
+    name: "Anggur",
+    description: "Deskripsi",
+    price: 80000,
+    image: "/bg-main.webp",
+  },
+  {
+    id: 8,
+    name: "Anggur",
+    description: "Deskripsi",
+    price: 80000,
     image: "/bg-main.webp",
   },
 ];
 
-export default function ProductSection() {
+export default function Products() {
   return (
-    <section className="w-full h-screen bg-green-50 py-16 lg:py-24 px-4">
+    <section className="w-full h-full bg-green-50 py-16 lg:py-24 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <div className="inline-block mb-3">
             <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
-              Produk Unggulan
+              Produk
             </span>
           </div>
           <h2 className="text-3xl md:text-6xl font-bold tracking-tight mb-4">
@@ -56,7 +76,7 @@ export default function ProductSection() {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Pilihan bibit anggur terbaik untuk hasil panen yang melimpah dan
-            berkualitas tinggi
+            berkualitas tinggi. (Silahkan cek stok terlebih dahulu)
           </p>
         </div>
 
@@ -73,12 +93,6 @@ export default function ProductSection() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-2 right-2 bg-white rounded-full px-2 py-1 flex items-center shadow-sm">
-                  <Star className="h-3 w-3 text-yellow-500 fill-yellow-500" />
-                  <span className="text-xs font-medium ml-1">
-                    {product.rating}
-                  </span>
-                </div>
               </div>
 
               <div className="p-4">
@@ -92,7 +106,7 @@ export default function ProductSection() {
                   </p>
                   <Button className="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg flex items-center text-sm font-medium transition-colors">
                     <ShoppingCart className="h-4 w-4 mr-1" />
-                    Pesan
+                    Cek
                   </Button>
                 </div>
               </div>
@@ -106,7 +120,7 @@ export default function ProductSection() {
               Butuh Bibit Anggur dalam Jumlah Besar?
             </h3>
             <p className="text-green-100">
-              Dapatkan penawaran khusus untuk pembelian grosir
+              Kami juga melayani pemesanan bibit anggur dalam jumlah besar.
             </p>
           </div>
           <button className="mt-4 md:mt-0 bg-white text-green-700 hover:bg-green-50 px-6 py-3 rounded-lg font-medium transition-colors flex items-center">
